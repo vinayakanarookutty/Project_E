@@ -1,0 +1,16 @@
+service: eduza-backend
+
+plugins:
+  - serverless-plugin-typescript
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  postSignUp:
+    handler: fns/authentication/post-signup/handler.handler
+    events:
+      - cognitoUserPool:
+          pool: us-east-1_Uv8qm6SbY
+          trigger: PostConfirmation
