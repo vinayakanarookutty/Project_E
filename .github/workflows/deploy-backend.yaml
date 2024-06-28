@@ -22,7 +22,7 @@ jobs:
       run: npm install -g pnpm
 
     - name: Install Serverless Framework
-      run: pnpm add -g serverless
+      run: npm install -g serverless
 
     - name: Install dependencies
       run: pnpm install
