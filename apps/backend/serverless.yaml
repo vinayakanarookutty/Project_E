@@ -1,7 +1,5 @@
 service: eduza-backend
 
-plugins:
-  - serverless-plugin-typescript
 
 provider:
   name: aws
