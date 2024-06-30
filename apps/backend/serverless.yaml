@@ -24,6 +24,6 @@ functions:
     handler: dist/cognito/main.handler
     events:
       - cognitoUserPool:
-          pool: us-east-1_Uv8qm6SbY
+          pool: project-e
           trigger: PreSignUp
           existing: true
