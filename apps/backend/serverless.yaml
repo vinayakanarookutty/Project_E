@@ -1,11 +1,11 @@
-service: serverless-example
+service: eduza-backend-dev
 
 plugins:
   - serverless-offline
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs20.x
 
 functions:
   main:
