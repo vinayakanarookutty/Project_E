@@ -1,14 +1,29 @@
-service: eduza-backend
+service: serverless-example
 
+plugins:
+  - serverless-offline
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs14.x
 
 functions:
-  postSignUp:
-    handler: fns/authentication/post-signup/handler.handler
+  main:
+    handler: dist/main.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+  users:
+    handler: dist/users/main.handler
+    events:
+      - http:
+          method: ANY
+          path: /users
+  cognito:
+    handler: dist/cognito/main.handler
     events:
       - cognitoUserPool:
           pool: us-east-1_Uv8qm6SbY
-          trigger: PostConfirmation
+          trigger: PreSignUp
+          existing: true

@@ -6,6 +6,7 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "web:dev":"turbo dev --filter=web",
+    "build:backend": "cd apps/backend && pnpm build",
     "deploy:backend": "cd apps/backend && serverless deploy",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },

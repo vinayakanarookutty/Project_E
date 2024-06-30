@@ -27,6 +27,9 @@ out/
 build
 dist
 
+# serverless
+.build
+.serverless
 
 # Debug
 npm-debug.log*
